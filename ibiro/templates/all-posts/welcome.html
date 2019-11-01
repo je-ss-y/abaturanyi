@@ -2,5 +2,10 @@
 
 {% block content %}
 {{block.super}}
+<div>
+{%for place in location%}
 
+<a>{{place.umurenge}}</a>
+{%endfor%}
+</div>
 {% endblock %}

@@ -9,7 +9,7 @@ class Location(models.Model):
     
 
     def __str__(self):
-        return self.first_name
+        return self.umurenge
 
     def save_editor(self):
         self.save()
