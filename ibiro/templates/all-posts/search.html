@@ -1,0 +1,21 @@
+{%extends 'all-posts/base.html'%} 
+{% block content %}
+<div class="container">
+
+
+  <div class="row">
+      <div class="col-md-2">
+      
+
+  {% if  searched_users %}
+    {% for user in  searched_users %}
+      
+          <p>you searched for :{{user.user.username}}</p>
+     
+    {% endfor %}
+  {% endif %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

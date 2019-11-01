@@ -11,6 +11,19 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="{% url 'welcome' %}">Ihuriro</a>
     </div>
+      <!-- Adding a search form  -->
+      <div>
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}" style="padding-left: 280px; padding-top:-40px">
+
+            <input type="text" class="form-control" placeholder="Search user" name="username">
+            
+        
+
+        </form>
+      </div>
+      </div>
+      <!-- search form end -->
+
   </div>
 </nav>
 </body>
