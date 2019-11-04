@@ -1,0 +1,40 @@
+{%extends 'all-posts/base.html'%}
+
+{% block content %}
+{{block.super}}
+<!-- <style>
+#profile{ 
+  width:150px;
+  height:150px;
+  border-radius: 2px
+
+}
+</style> -->
+
+<div class="container">
+  
+    <div class="row">
+      
+      <div class="col-md-4" id="profile">
+        <img src="{{profilepicture.profilepicture.url}}" class="circle" alt="Image" style="height:200px; width:200px;  border-radius: 50% ">
+
+
+      </div>
+
+
+
+      <div class="col-md-4">
+        <h4>{{profilepicture.bio}}</h4>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
