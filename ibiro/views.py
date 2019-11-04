@@ -3,7 +3,7 @@ from django.http  import HttpResponse
 from .models import Location
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .forms import ProfileForm
+from .forms import ProfileForm,PostForm
 
 # Create your views here.
 
@@ -22,7 +22,7 @@ def new_post(request):
     else:
         form = PostForm()
     return render(request, 'all-posts/newpost.html', {"form": form})
-    
+
 @login_required(login_url='/accounts/login/')
 def posts_of_day(request):
     current_user = request.user
