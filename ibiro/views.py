@@ -3,6 +3,7 @@ from django.http  import HttpResponse
 from .models import Location
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from .forms import ProfileForm
 
 # Create your views here.
 
