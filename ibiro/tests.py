@@ -34,18 +34,18 @@ class ProfileTestClass(TestCase):
 
     # Testing  instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.james,Location))
+        self.assertTrue(isinstance(self.james,Profile))
 
 
 
     # Testing Save Method
     def test_save_method(self):
-        self.james.save_location()
-        locations = Location.objects.all()
-        self.assertTrue(len(locations) > 0)
+        self.james.save_profile()
+        profiles = Profile.objects.all()
+        self.assertTrue(len(profiles) > 0)
 
      # Testing Save Method
     def test_delete_method(self):
         self.james.delete_editor()
-        locations = Location.objects.all()
-        self.assertTrue(len(locations) ==0)
+        profiles = Profile.objects.all()
+        self.assertTrue(len(profiles) ==0)
