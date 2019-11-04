@@ -8,6 +8,28 @@ from .forms import ProfileForm
 # Create your views here.
 
 
+@login_required(login_url='/accounts/login/')
+def new_post(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            # post.user = current_user
+            post.save()
+        return redirect('postsToday')
+
+    else:
+        form = PostForm()
+    return render(request, 'all-posts/newpost.html', {"form": form})
+    
+@login_required(login_url='/accounts/login/')
+def posts_of_day(request):
+    current_user = request.user
+   
+    snap =  Snap.objects.all()
+    return render(request, 'all-posts/poststoday.html', {"snap":snap})
+
 
 
 @login_required(login_url='/accounts/login/')
