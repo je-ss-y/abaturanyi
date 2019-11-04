@@ -33,3 +33,24 @@ class Profile(models.Model):
 
 
 
+class Snap(models.Model):
+    image=  models.ImageField(upload_to='images/', blank=True)
+    photoname = models.TextField()
+    description =models.TextField()
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    
+    
+    
+    
+    # profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
+
+    
+
+
+    def __str__(self):
+        return self.snap
+
+
+
+
